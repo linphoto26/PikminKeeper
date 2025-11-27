@@ -1,0 +1,5 @@
+{
+  "name": "Pikmin Keeper",
+  "description": "A delightful application to track your Pikmin collection, view statistics, and consult an AI guide for tips.",
+  "requestFramePermissions": []
+}
