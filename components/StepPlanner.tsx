@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SEEDLING_TYPES } from '../constants';
-import { Footprints, Timer, Zap, PlayCircle } from 'lucide-react';
+import { Footprints, Timer, ChevronsRight, PlayCircle } from 'lucide-react';
 
 const StepPlanner: React.FC = () => {
   const [seedlings, setSeedlings] = useState<Record<string, number>>({});
@@ -56,17 +56,17 @@ const StepPlanner: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-white/50 rounded-2xl border border-white/50 backdrop-blur-sm">
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                    <div className={`p-2 rounded-lg mr-3 ${isBoosterActive ? 'bg-yellow-100' : 'bg-gray-100'}`}>
-                        <Zap size={20} className={`${isBoosterActive ? 'text-yellow-500 fill-yellow-500' : 'text-gray-400'}`} />
+                    <div className={`p-2 rounded-lg mr-3 transition-colors ${isBoosterActive ? 'bg-pink-100' : 'bg-gray-100'}`}>
+                        <ChevronsRight size={20} className={`transition-colors ${isBoosterActive ? 'text-pink-500' : 'text-gray-400'}`} />
                     </div>
                     <div>
-                        <span className="font-bold text-gray-700 block text-sm">花苗加速器</span>
+                        <span className="font-bold text-gray-700 block text-sm">花苗加速器 (種花)</span>
                         <span className="text-xs text-gray-400">減少 30% 步數</span>
                     </div>
                 </div>
                 <div className="relative inline-block w-12 h-6 align-middle select-none transition duration-200 ease-in">
                     <input type="checkbox" name="toggle" id="boosterToggle" checked={isBoosterActive} onChange={(e) => setIsBoosterActive(e.target.checked)} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer peer checked:right-0 right-6 border-gray-300 transition-all duration-300 shadow-sm"/>
-                    <label htmlFor="boosterToggle" className={`toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors ${isBoosterActive ? 'bg-yellow-400' : 'bg-gray-300'}`}></label>
+                    <label htmlFor="boosterToggle" className={`toggle-label block overflow-hidden h-6 rounded-full cursor-pointer transition-colors ${isBoosterActive ? 'bg-pink-400' : 'bg-gray-300'}`}></label>
                 </div>
             </div>
 
