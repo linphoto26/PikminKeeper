@@ -2,7 +2,9 @@
 export default {
   content: [
     "./index.html",
-    "./**/*.{js,ts,jsx,tsx}",
+    "./*.{js,ts,jsx,tsx}",           // 掃描根目錄下的檔案 (如 App.tsx, index.tsx)
+    "./components/**/*.{js,ts,jsx,tsx}", // 掃描 components 資料夾
+    "./services/**/*.{js,ts,jsx,tsx}",   // 掃描 services 資料夾
   ],
   theme: {
     extend: {
